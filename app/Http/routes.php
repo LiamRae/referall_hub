@@ -13,10 +13,11 @@
 
 Route::get('/', 'PagesController@home');
 
-
+Route::resource('codes', 'CodesController');
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
 ]);
+
 

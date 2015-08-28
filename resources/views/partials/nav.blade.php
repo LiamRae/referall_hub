@@ -7,14 +7,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DMCA Sender</a>
+            <a class="navbar-brand" href="#">Referall Hub</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{{ url('/') }}">Home</a></li>
                 @if (Auth::user())
-                    <li><a href="{{ url('/notices/create') }}">Create Notice</a></li>
-                    <li><a href="{{ url('/notices') }}">Show Notices</a></li>
+                    <li><a href="{{ url('/codes/create') }}">Submit a Code</a></li>
                 @endif
             </ul>
 

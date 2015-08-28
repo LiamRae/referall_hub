@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DMCA Sender</title>
+    <title>Referall Hub</title>
     <link href="/css/app.css" rel="stylesheet" />
 </head>
 <body>
