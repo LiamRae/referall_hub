@@ -1,5 +1,5 @@
+process.env.DISABLE_NOTIFIER = true
 var elixir = require('laravel-elixir');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,5 +12,12 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+
     mix.sass('app.scss');
+
+    mix.scripts([
+        'libs/jquery-2.1.4.min.js',
+        'libs/bootstrap.min.js',
+        'libs/select2.min.js'
+    ]);
 });

@@ -1,2 +1,39 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import 'libs/bootstrap';
+@import 'pages/home';
+
+html {
+    font-size: 62.5%;
+}
+
+.container-fluid {
+    margin-top: 80px;
+}
+
+.page-heading {
+    text-align: center;
+    font-size: 3.2rem;
+    margin-top: 20px;
+
+    &:after {
+        display: block;
+        content: '';
+        background: darkred;
+        height: 3px;
+        width: 300px;
+        margin: 40px auto 0;
+
+    }
+}
+
+.form-group {
+    padding: 10px;
+
+
+
+    .btn-primary {
+        font-size: 2rem;
+        height: 50px;
+    }
+}
 
