@@ -5,6 +5,11 @@
 {!! Form::open(['method' => 'POST', 'action' => 'CodesController@store']) !!}
 
     <div class="form-group">
+        {!! Form::label('service', 'Service') !!}
+        {!! Form::select('service', $services, null, ['class' => 'form-control']) !!}
+    </div>
+
+    <div class="form-group">
         {!! Form::label('referall_code', 'Referall Code') !!}
         {!! Form::text('referall_code', null, ['class' => 'form-control']) !!}
     </div>

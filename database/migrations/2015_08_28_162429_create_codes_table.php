@@ -19,6 +19,9 @@ class CreateCodesTable extends Migration
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->integer('service_id')->unsigned();
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
         });
     }
 
@@ -30,6 +33,5 @@ class CreateCodesTable extends Migration
     public function down()
     {
         Schema::drop('codes');
-        Schema::dropForeign('codes_user_id_foreign');
     }
 }

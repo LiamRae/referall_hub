@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
+use App\Code;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
+use App\Service;
 
 class CodesController extends Controller
 {
@@ -16,7 +18,7 @@ class CodesController extends Controller
      */
     public function index()
     {
-        //
+        return "this is the index route";
     }
 
     /**
@@ -26,20 +28,24 @@ class CodesController extends Controller
      */
     public function create()
     {
+        $services = Service::lists('name', 'id');
 
-        return view('codes.create');
+        return view('codes.create', compact('services'));
 
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created referall code.
      *
      * @param  Request  $request
      * @return Response
      */
     public function store(Request $request)
     {
-        //
+
+        $code = new Code($request->all());
+
+        Auth::user()->codes()->save($code);
     }
 
     /**
