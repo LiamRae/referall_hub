@@ -43,17 +43,11 @@ class CodesController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::find(2);
-        $service = Service::find(3);
-
-        foreach ($service->users as $user) {
-            echo $user->pivot->referall_code . "</br>";
-        }
-
-
-//        foreach ($user->services as $service) {
-//            echo $service->pivot->referall_code;
-//        }
+        $user = Auth::user();
+        $service = $request->input('service');
+        $referall = $request->input('referall_code');
+        $user->services()->attach($service, ['referall_code' => $referall]);
+        return redirect('/');
     }
 
     /**
