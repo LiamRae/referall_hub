@@ -19,13 +19,8 @@ class Service extends Model
     ];
 
 
-    /**
-     * A service can have many codes
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function code()
+    public function users()
     {
-        return $this->hasMany('App\Code');
+        return $this->belongsToMany('App\User')->withPivot('referall_code');
     }
 }

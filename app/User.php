@@ -34,13 +34,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $hidden = ['password', 'remember_token'];
 
 
-    /**
-     * A user can have many codes.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function codes()
+    public function services()
     {
-        return $this->hasMany('App\Code');
+        return $this->belongsToMany('App\Service')->withPivot('referall_code');
     }
 }

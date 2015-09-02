@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Code;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -42,10 +43,17 @@ class CodesController extends Controller
      */
     public function store(Request $request)
     {
+        $user = User::find(2);
+        $service = Service::find(3);
 
-        $code = new Code($request->all());
+        foreach ($service->users as $user) {
+            echo $user->pivot->referall_code . "</br>";
+        }
 
-        Auth::user()->codes()->save($code);
+
+//        foreach ($user->services as $service) {
+//            echo $service->pivot->referall_code;
+//        }
     }
 
     /**

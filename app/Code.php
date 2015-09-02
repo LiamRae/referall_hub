@@ -16,23 +16,5 @@ class Code extends Model
         'updated_at'
     ];
 
-    /**
-     * A code is owned by a user
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user()
-    {
-        return $this->belongsTo('App/User');
-    }
 
-    /**
-     * A code is owned by a service
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function service()
-    {
-        return $this->belongsTo('App\Service');
-    }
 }
