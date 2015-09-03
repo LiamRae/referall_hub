@@ -12,6 +12,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                <li class="active"><a href="{{ url('/services') }}">Services</a></li>
                 @if (Auth::user())
                     <li><a href="{{ url('/codes/create') }}">Submit a Code</a></li>
                 @endif

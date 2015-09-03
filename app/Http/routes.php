@@ -13,6 +13,7 @@
 
 Route::get('/', 'PagesController@home');
 
+Route::resource('services', 'ServicesController');
 Route::resource('codes', 'CodesController');
 
 Route::controllers([

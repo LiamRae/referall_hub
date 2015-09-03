@@ -19,11 +19,12 @@ class CodesController extends Controller
      */
     public function index()
     {
-        return "this is the index route";
+
+        return view('codes.index');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Create a new referall code
      *
      * @return Response
      */
@@ -50,26 +51,17 @@ class CodesController extends Controller
         return redirect('/');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
-     * Show the form for editing the specified resource.
+     * Edit a referall code
      *
      * @param  int  $id
      * @return Response
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
