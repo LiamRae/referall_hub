@@ -51,7 +51,7 @@ class CodesController extends Controller
         $service = $request->input('service');
         $referall = $request->input('referall_code');
         $user->services()->attach($service, ['referall_code' => $referall]);
-        return redirect('/');
+        return redirect('/codes');
     }
 
 
@@ -91,11 +91,6 @@ class CodesController extends Controller
         return redirect('/codes');
     }
 
-    public function show($id)
-    {
-
-    }
-
 
 
     /**
@@ -106,7 +101,11 @@ class CodesController extends Controller
      */
     public function destroy($id)
     {
+        $user = Auth::user();
         $service = Service::findOrFail($id);
-        return view('codes.destroy', compact('service'));
+        $user->services()->detach($service);
+
+        return redirect('/codes');
+
     }
 }
