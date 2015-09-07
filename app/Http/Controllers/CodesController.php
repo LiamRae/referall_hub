@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Code;
 use App\User;
+use DB;
+use Session;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -12,15 +14,16 @@ use App\Service;
 
 class CodesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
+
     public function index()
     {
-
-        return view('codes.index');
+        $codes = [];
+        $user = Auth::user();
+        foreach($user->services as $service) {
+            $codes[$service->id] = $service->pivot->referall_code;
+        }
+        
+        return view('codes.index', compact('codes'));
     }
 
     /**
@@ -61,7 +64,11 @@ class CodesController extends Controller
      */
     public function edit($id)
     {
-
+        $service = Service::findOrFail($id);
+        Session::put('service_id', $id);
+        $user = Auth::user();
+        $code = $user->services()->where('service_id', $id)->first()->pivot;
+        return view('codes.edit', compact('code', 'service', 'id'));
     }
 
     /**
@@ -73,8 +80,23 @@ class CodesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Auth::user()->id;
+        $referall = $request->input('referall_code');
+        $service = Session::get('service_id');
+        $code = DB::table('service_user')
+            ->where('user_id', $user)
+            ->where('service_id', $service)
+            ->update(['referall_code' => $referall]);
+
+        return redirect('/codes');
     }
+
+    public function show($id)
+    {
+
+    }
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -84,6 +106,7 @@ class CodesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('codes.destroy', compact('service'));
     }
 }

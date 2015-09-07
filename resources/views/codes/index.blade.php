@@ -2,6 +2,11 @@
 
 @section('content')
 
-<h1>list of codes</h1>
+    @foreach($codes as $key => $code)
+        <li>{{ $code }}
+            <a href="{{ route('codes.edit', $key) }}"> Edit</a>
+            <a href="{{ route('codes.destroy', $key) }}"> Delete</a>
+        </li>
+    @endforeach
 
 @endsection

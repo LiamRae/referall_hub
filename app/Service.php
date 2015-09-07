@@ -14,8 +14,7 @@ class Service extends Model
     protected $table = 'services';
 
     protected $fillable = [
-        'name',
-        'code_id'
+        'name'
     ];
 
 

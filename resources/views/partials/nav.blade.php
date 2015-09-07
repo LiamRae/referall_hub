@@ -15,6 +15,7 @@
                 <li class="active"><a href="{{ url('/services') }}">Services</a></li>
                 @if (Auth::user())
                     <li><a href="{{ url('/codes/create') }}">Submit a Code</a></li>
+                    <li><a href="{{ url('codes') }}">View my Codes</a></li>
                 @endif
             </ul>
 

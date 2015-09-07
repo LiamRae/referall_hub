@@ -25,7 +25,13 @@ class ServicesController extends Controller
 
     public function show($id)
     {
+        $code = DB::table('service_user')
+            ->select('referall_code')
+            ->where('service_id', '=', $id)
+            ->orderByRaw("Rand()")
+            ->first();
 
+        return $code->referall_code;
 
     }
 
@@ -37,12 +43,6 @@ class ServicesController extends Controller
      */
     public function selectRandomCode($id)
     {
-        $code = DB::table('service_user')
-            ->select('referall_code')
-            ->where('service_id', '=', $id)
-            ->orderByRaw("Rand()")
-            ->first();
 
-        return $code->referall_code;
     }
 }
