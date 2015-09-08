@@ -35,14 +35,4 @@ class ServicesController extends Controller
 
     }
 
-    /**
-     * Retrieves a random referall code from the chosen service
-     *
-     * @param $id
-     * @return mixed
-     */
-    public function selectRandomCode($id)
-    {
-
-    }
 }

@@ -15,10 +15,9 @@ class RedirectIfAuthenticated
     protected $auth;
 
     /**
-     * Create a new filter instance.
+     *  Create a new filter instance
      *
-     * @param  Guard  $auth
-     * @return void
+     * @param Guard $auth
      */
     public function __construct(Guard $auth)
     {
