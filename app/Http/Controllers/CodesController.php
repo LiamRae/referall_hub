@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\CreateCodeRequest;
 use Auth;
 use App\Code;
-use App\User;
 use DB;
 use Session;
 use Illuminate\Http\Request;
@@ -47,10 +47,10 @@ class CodesController extends Controller
     /**
      * Store a newly created referall code.
      *
-     * @param  Request  $request
+     * @param CreateCodeRequest|Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateCodeRequest $request)
     {
         $user = Auth::user();
         $service = $request->input('service');
@@ -79,11 +79,11 @@ class CodesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  int  $id
+     * @param CreateCodeRequest|Request $request
      * @return Response
+     * @internal param int $id
      */
-    public function update(Request $request, $id)
+    public function update(CreateCodeRequest $request)
     {
         $user = Auth::user()->id;
         $referall = $request->input('referall_code');
