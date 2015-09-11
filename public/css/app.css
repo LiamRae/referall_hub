@@ -5346,6 +5346,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.navbar-brand {
+  text-align: center; }
+
 html {
   font-size: 62.5%; }
 
