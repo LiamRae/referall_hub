@@ -69,5 +69,9 @@
         </div>
 
     </section>
+    <footer>
+        <span>Woah! What are you doing all the way down here?</span></br>
+        <span>^^^ All the good stuff's up there ^^^</span>
+    </footer>
 
 @endsection
