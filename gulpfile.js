@@ -20,6 +20,8 @@ elixir(function(mix) {
     mix.scripts([
         'libs/jquery-2.1.4.min.js',
         'libs/bootstrap.min.js',
-        'libs/select2.min.js'
+        'libs/select2.min.js',
+        'libs/jqcloud.min.js',
+        'app.js'
     ]);
 });

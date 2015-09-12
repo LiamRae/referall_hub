@@ -5347,13 +5347,118 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/*!
+ * jQCloud 2.0.1
+ * Copyright 2011 Luca Ongaro (http://www.lucaongaro.eu)
+ * Copyright 2013 Daniel White (http://www.developerdan.com)
+ * Copyright 2014 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+/* layout */
+div.jqcloud {
+  overflow: hidden;
+  position: relative; }
+
+div.jqcloud span {
+  padding: 0; }
+
+/* fonts */
+div.jqcloud {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 10px;
+  line-height: normal; }
+
+div.jqcloud a {
+  font-size: inherit;
+  text-decoration: none; }
+
+div.jqcloud span.w10 {
+  font-size: 550%; }
+
+div.jqcloud span.w9 {
+  font-size: 500%; }
+
+div.jqcloud span.w8 {
+  font-size: 450%; }
+
+div.jqcloud span.w7 {
+  font-size: 400%; }
+
+div.jqcloud span.w6 {
+  font-size: 350%; }
+
+div.jqcloud span.w5 {
+  font-size: 300%; }
+
+div.jqcloud span.w4 {
+  font-size: 250%; }
+
+div.jqcloud span.w3 {
+  font-size: 200%; }
+
+div.jqcloud span.w2 {
+  font-size: 150%; }
+
+div.jqcloud span.w1 {
+  font-size: 100%; }
+
+/* colors */
+div.jqcloud {
+  color: #A8DBA8; }
+
+div.jqcloud a {
+  color: inherit; }
+
+div.jqcloud a:hover {
+  color: #A8DBA8; }
+
+div.jqcloud a:hover {
+  color: #A8DBA8; }
+
+div.jqcloud span.w10 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w9 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w8 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w7 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w6 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w5 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w3 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w2 {
+  color: #A8DBA8; }
+
+div.jqcloud span.w1 {
+  color: #A8DBA8; }
+
 body {
   font-family: Oswald, Verdana, sans-serif;
   letter-spacing: 1px; }
 
+.row.no-pad {
+  margin-right: 0;
+  margin-left: 0; }
+
+.row.no-pad > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
 .navbar-inverse .navbar-brand {
   display: inline-block;
   color: #A8DBA8; }
+  .navbar-inverse .navbar-brand:hover {
+    color: #A8DBA8; }
 
 .navbar-header {
   text-align: center; }
@@ -5361,39 +5466,18 @@ body {
 .navbar {
   background-color: #0B486B; }
 
-.navbar-nav {
-  background-color: #0B486B; }
-  .navbar-nav .active {
-    background-color: #0B486B; }
-
 .hero-section {
   display: block;
   margin-top: 50px;
   width: 100%;
-  height: 100vh;
   background-color: #A8DBA8;
   overflow: hidden; }
   .hero-section h2 {
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
     color: #0B486B; }
-  .hero-section .services-list {
-    text-align: center;
-    margin-top: 300px;
-    font-size: 18px;
-    color: #0B486B; }
-
-.signup-section {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background-color: #3B8686; }
-  .signup-section h2 {
-    color: #A8DBA8;
-    text-align: center;
-    margin-top: 50px; }
+  .hero-section .service-grid {
+    margin-top: 250px; }
 
 .call-to-action {
   background-color: #0B486B;
@@ -5408,6 +5492,46 @@ body {
   left: 50%;
   margin-top: -40px;
   margin-left: -150px; }
+
+.call-to-action-signup {
+  background-color: #0B486B;
+  width: 300px;
+  padding: 15px;
+  font-size: 24px;
+  border: 0;
+  border-radius: 0;
+  color: #A8DBA8;
+  margin-top: 100px; }
+
+.signup-section {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #3B8686; }
+  .signup-section h2 {
+    color: #A8DBA8;
+    text-align: center;
+    margin-top: 50px; }
+
+.word-cloud {
+  display: block;
+  position: relative;
+  color: #A8DBA8;
+  width: 350px;
+  height: 300px;
+  margin-top: 80px; }
+
+.info-section {
+  display: block;
+  position: relative;
+  background-color: #79BD9A;
+  overflow: hidden;
+  width: 100%;
+  color: #0B486B; }
+  .info-section h2 {
+    text-align: center; }
 
 html {
   font-size: 62.5%; }
