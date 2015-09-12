@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="hero-section">
-        <div class="container">
+        <div class="container text-center">
             <h2>Get rewards when you signup to new services</h2>
             <a class="btn btn-default call-to-action" href="{{ url('/services') }}">Give me a signup code</a>
             {{--<ul class="list-unstyled services-list">--}}

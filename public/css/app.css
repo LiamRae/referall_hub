@@ -5446,6 +5446,10 @@ body {
   font-family: Oswald, Verdana, sans-serif;
   letter-spacing: 1px; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
 .row.no-pad {
   margin-right: 0;
   margin-left: 0; }
@@ -5468,16 +5472,17 @@ body {
 
 .hero-section {
   display: block;
+  position: relative;
   margin-top: 50px;
   width: 100%;
   background-color: #A8DBA8;
   overflow: hidden; }
   .hero-section h2 {
-    margin-top: 80px;
+    margin-top: 55px;
     text-align: center;
     color: #0B486B; }
   .hero-section .service-grid {
-    margin-top: 250px; }
+    margin-top: 55px; }
 
 .call-to-action {
   background-color: #0B486B;
@@ -5487,11 +5492,7 @@ body {
   border: 0;
   border-radius: 0;
   color: #A8DBA8;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -40px;
-  margin-left: -150px; }
+  margin-top: 55px; }
 
 .call-to-action-signup {
   background-color: #0B486B;
@@ -5501,7 +5502,7 @@ body {
   border: 0;
   border-radius: 0;
   color: #A8DBA8;
-  margin-top: 100px; }
+  margin-top: 55px; }
 
 .signup-section {
   display: block;
@@ -5513,7 +5514,7 @@ body {
   .signup-section h2 {
     color: #A8DBA8;
     text-align: center;
-    margin-top: 50px; }
+    margin-top: 55px; }
 
 .word-cloud {
   display: block;
@@ -5521,7 +5522,7 @@ body {
   color: #A8DBA8;
   width: 350px;
   height: 300px;
-  margin-top: 80px; }
+  margin-top: 55px; }
 
 .info-section {
   display: block;
@@ -5529,16 +5530,20 @@ body {
   background-color: #79BD9A;
   overflow: hidden;
   width: 100%;
-  color: #0B486B; }
+  color: #0B486B;
+  padding-top: 55px;
+  padding-bottom: 55px; }
   .info-section h2 {
     text-align: center; }
+  .info-section h3 {
+    text-decoration: underline; }
   .info-section p {
     font-size: 18px;
     color: #0B486B;
     line-height: 27px;
     margin-top: 10px; }
   .info-section .col-xs-12 {
-    margin-top: 20px; }
+    margin-top: 55px; }
 
 footer {
   background-color: #0B486B; }
